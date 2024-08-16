@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing:content-box;
+}
+body{
+    background-color: #f87f73;
+    background-image: -webkit-linear-gradient( -28deg, #f87f73 0%, #f87f73 60%, #292423 60%, #292423 60%);
+    background-image: linear-gradient( -28deg, #f87f73 0%, #f87f73 60%, #292423 60%, #292423 60%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+header{
+    position: fixed;
+    height: 12vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+.nav-part1{
+    width: 17%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    /* color: white; */
+}
+.nav-part1 img{
+    height: 90%;
+    width: 90%;
+    /* color: white; */
+}
+.nav-part1 img:hover{
+    cursor: pointer;
+}
+.nav-part2{
+    width: 83%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Remove bold */
+}
+
+.nav-part2 h2:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+
+#OuterContainer{
+    border-radius: 12px;
+    height: 80vh;
+    width: 60vw;
+    background-color: rgb(45, 132, 132);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#innerContainer{
+    border-radius: 12px;
+    height: 50%;
+    width:90%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+
+#fact-container{
+    height: 70%;
+    width:80%;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin:0 10px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:3rem;
+    position: relative;
+    bottom:50px;
+    
+}
+img{
+    height: 180px;
+    mix-blend-mode: multiply;
+}
+
+p{
+    color:black ;
+    margin: 0 5px;
+    text-align: justify;
+    font-size: 1.5rem;
+
+}
+
+button{
+    font-size: 30px;
+    font-weight: 900;
+    background-color:#f87f73;
+    color: white;
+    position: relative;
+    top:30px;
+    margin:10px 0 0 0;
+    padding: 10px;
+    border: 2px solid white;
+    width: 40%;
+    border-radius: 20px;
+}
+
+button:active{
+    transform: scale(0.9);
+}

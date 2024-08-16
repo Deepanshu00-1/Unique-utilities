@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #08a0a2;
+}
+
+
+header{
+    position: fixed;
+    height: 12vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+
+}
+.nav-part1{
+    width: 17%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    /* color: white; */
+}
+.nav-part1 img{
+    height: 90%;
+    width: 90%;
+    /* color: white; */
+}
+.nav-part1 img:hover{
+    cursor: pointer;
+}
+.nav-part2{
+    width: 83%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Remove bold */
+}
+
+.nav-part2 h2{
+    font-size: 4vh;
+}
+.nav-part2 h2:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+
+.container{
+    background-color: white;
+    padding:2rem;
+    border-radius:1rem;
+    height: 75vh;
+    width:45vh;
+    margin-top: 5vh;
+}
+h2{
+
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+form{
+    margin:2rem 0 1rem 0;
+}
+form select,button,input{
+    width:100%;
+    border:none;
+    outline: none;
+    border-radius: 1rem;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    color:black;
+    padding-left: 5px;
+}
+form input{
+    border:1px solid lightgrey;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.75rem;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;    
+}
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top:1rem ;
+}
+.select-container img{
+    max-width: 2rem;
+}
+.select-container{
+    display: flex;
+    width:6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+}
+
+.select-container select{
+    font-size: 1rem;
+    width:auto;
+}
+
+.msg{
+    margin:2rem 0 2rem 0;
+}
+
+form button{
+    height:3rem;
+    background-color: #9d2d07;
+    color:white;
+    font-size:1.15rem;
+    cursor:pointer;
+}
+
+form button:active{
+    transform:scale(0.96);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  
+</head>
+
+<header>
+  <div class="nav-part1">
+    <a href="../index.html"><img src="../logo1.png" alt=""></a>
+  </div>
+  <div class="nav-part2">
+    <a href="../Calculator/index.html"><h2>Calculator</h2></a>
+    <a href="../CurrencyConvertor/index.html"><h2>Currency <br> Convertor</h2></a>
+    <a href="../RandomFactGenerator/index.html"><h2>Random Fact <br> Generator</h2></a>
+    <a href="../Unit and Temperature convertor/index.html"><h2>Unit <br> Convertor</h2></a>
+    <a href="../Unit and Temperature convertor/unitconverter.html"><h2>Temperature <br> Convertor</h2></a>
+  </div>
+</header>
+
+
+<body class="h-screen bg-gradient-to-b from-purple-600 to to-orange-400 flex items-center justify-center min-h-screen">
+
+  <div class="bg-gradient-to-b from-purple-300 to to-orange-200 p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center mb-6">Temperature Converter</h1>
+    
+    <div class="mb-4">
+      <label for="temperature" class="block text-sm font-medium text-gray-700 ">Enter Temperature</label>
+      <input type="number" id="temperature" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 px-1" placeholder="Enter value">
+    </div>
+
+    <div class="mb-4">
+      <label for="from" class="block text-sm font-medium text-gray-700">From</label>
+      <select id="from" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+    </div>
+
+    <div class="mb-6">
+      <label for="to" class="block text-sm font-medium text-gray-700">To</label>
+      <select id="to" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+    </div>
+
+    <button id="convert" class="w-full bg-gradient-to-b from-purple-600 to to-orange-400 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-600">Convert</button>
+
+    <div id="result" class="mt-6 text-center text-lg font-semibold"></div>
+  </div>
+
+</body>
+<script>
+    document.getElementById('convert').addEventListener('click', function () {
+  const temperature = parseFloat(document.getElementById('temperature').value);
+  const fromUnit = document.getElementById('from').value;
+  const toUnit = document.getElementById('to').value;
+  
+  if (isNaN(temperature)) {
+    document.getElementById('result').textContent = 'Please enter a valid number';
+    return;
+  }
+
+  let convertedTemp;
+
+  if (fromUnit === 'celsius') {
+    if (toUnit === 'fahrenheit') {
+      convertedTemp = (temperature * 9/5) + 32;
+    } else if (toUnit === 'kelvin') {
+      convertedTemp = temperature + 273.15;
+    } else {
+      convertedTemp = temperature;
+    }
+  } else if (fromUnit === 'fahrenheit') {
+    if (toUnit === 'celsius') {
+      convertedTemp = (temperature - 32) * 5/9;
+    } else if (toUnit === 'kelvin') {
+      convertedTemp = (temperature - 32) * 5/9 + 273.15;
+    } else {
+      convertedTemp = temperature;
+    }
+  } else if (fromUnit === 'kelvin') {
+    if (toUnit === 'celsius') {
+      convertedTemp = temperature - 273.15;
+    } else if (toUnit === 'fahrenheit') {
+      convertedTemp = (temperature - 273.15) * 9/5 + 32;
+    } else {
+      convertedTemp = temperature;
+    }
+  }
+
+  document.getElementById('result').textContent = `Converted Temperature: ${convertedTemp.toFixed(2)} ${toUnit.charAt(0).toUpperCase() + toUnit.slice(1)}`;
+});
+
+</script>
+</html>
